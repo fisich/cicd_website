@@ -1,6 +1,8 @@
 import os
 import signal
+
 from flask import Flask
+
 from project import generator
 
 app = Flask(__name__)
