@@ -11,4 +11,9 @@ script:
 after_success:
   — sh .travis/deploy_dockerhub.sh
   - test "$TRAVIS_BRANCH" = "master" && test "$TRAVIS_PULL_REQUEST" = "false"
-    && sh .travis/deploy_heroku.sh
+
+deploy:
+  provider: heroku: "https://git.heroku.com/stark-lake-47855.git"
+  app: "stark-lake-47855"
+  username: $HEROKU_USER
+  password: $HEROKU_PASSWORD
