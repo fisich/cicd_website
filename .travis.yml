@@ -11,5 +11,8 @@ script:
 after_success:
   — sh .travis/deploy_dockerhub.sh
   — test "$TRAVIS_BRANCH" = "master" && test "$TRAVIS_PULL_REQUEST" = "false"
-  — sh .travis/deploy_heroku.sh
 
+deploy:
+  provider: heroku
+  api_key: $HEROKU_API_KEY
+  app: "stark-lake-47855"
