@@ -18,7 +18,7 @@ def generate_buzz():
     page += '.ex5 .txt:before {content: ""; position: absolute; height: 3px; width: 400px;' \
             'background:rgb(81, 227, 213); top: -7%;margin: 0 auto; left: 0;right: 0;}'
     page += 'body {background-image: url("/resources/bg.jpeg"); background-size: cover; color: white}</style></head>' \
-            '<body><div class="ex5"><p class="txt">CI/CD Парсер</p></div>'
+            '<body><div class="ex5"><p class="txt">My CI/CD Parser</p></div>'
 
     if len(request.args) != 0:
         page += '<br>Параметры страницы:<br>'
